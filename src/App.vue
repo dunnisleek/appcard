@@ -30,13 +30,13 @@
   </section>
 </template>
    
-<script setup>
+<script >
 import HeaderCom from './components/HeaderCom'
 import whiteSection from './components/whiteSection.vue'
-import { useDark,useToggle} from '@vueuse/core';
+// import { useDark,useToggle} from '@vueuse/core';
 
-    const isDark = useDark();
-      const toggleDark = useToggle(isDark);
+    // const isDark = useDark();
+      // const toggleDark = useToggle(isDark);
     
 
 
