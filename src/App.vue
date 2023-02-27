@@ -32,7 +32,7 @@
 import {ref} from 'vue';
 import HeaderCom from './components/HeaderCom'
 import whiteSection from './components/whiteSection.vue'
-// import { useDark,useToggle} from '@vueuse/core';
+
 
       const dark = ref(true)
       const toggleDark = () =>{
