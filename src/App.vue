@@ -1,13 +1,11 @@
-<template>
+<template >
    
-  <section :class="mode">
+  <section :class="{dark:dark}">
     
-    <!-- <section> -->
+    <button class="switcher" @click="toggleDark">Theme switcher</button>
    <HeaderCom/>
     <div class="wrapper">
 
-   <!-- <HeaderCom :mode="mode" @toggle="toggle" /> -->
-   
    <svg xmlns="http://www.w3.org/2000/svg" class="box" display="flex" width="45" height="45" viewBox="0 0 24 24" stroke-width="2" stroke="white" fill="none" stroke-linecap="round" stroke-linejoin="round">
    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
    <path d="M4 4m0 2a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v12a2 2 0 0 1 -2 2h-12a2 2 0 0 1 -2 -2z"></path>
@@ -21,72 +19,112 @@
     <h1>Untercom <span>APP</span></h1>
     <p>Convert your hottest leads</p>
    </div>
-   <whiteSection/>
-   {{ isDark }}
-   {{ toggleDark }}
+   <whiteSection :class="{light:dark}"/>
+  
   <br />
-  <button @click="toggleDark">Toggle Dark Mode</button>
- 
+
+  
   </section>
+ 
 </template>
    
-<script >
+ <script setup>
+import {ref} from 'vue';
 import HeaderCom from './components/HeaderCom'
 import whiteSection from './components/whiteSection.vue'
 // import { useDark,useToggle} from '@vueuse/core';
 
+      const dark = ref(true)
+      const toggleDark = () =>{
+        dark.value = !dark.value
+      }
     // const isDark = useDark();
-      // const toggleDark = useToggle(isDark);
-    
+    // const toggleDark() = useToggle(isDark);
+  
 
 
 
-  export default {
+  // export default {
  
-    name:'app',
-    components:{whiteSection, HeaderCom},
+  //   name:'app',
+  //   components:{whiteSection, HeaderCom},
 
-    data(){
-      return{
+  //   data(){
+  //     return{
      
-        mode:'dark',
+  //       mode:'dark',
        
       
-      }
-    },
+  //     }
+  //   },
     
-    methods:{
-      toggle(){
-        if(this.mode === 'dark'){
-          this.mode === 'light'
-          console.log(this.mode)
-        }else if(this.mode ==='light'){
-          this.mode ='dark'
-          console.log(this.mode)
-        }else{
-          this.mode ='dark'
-        }
+  //   methods:{
+  //     toggle(){
+  //       if(this.mode === 'dark'){
+  //         this.mode === 'light'
+  //         console.log(this.mode)
+  //       }else if(this.mode ==='light'){
+  //         this.mode ='dark'
+  //         console.log(this.mode)
+  //       }else{
+  //         this.mode ='dark'
+  //       }
         
-      },
+  //     },
     
       
-    }
-  }
+  //   }
+  // }
 
-</script>
+// </script>
 
 <style>
+
+p{
+  color:#fff;
+}
 .box{
   margin: auto;
   display: flex;
 }
 body{
-  height:100vh;
+ 
   margin: 0;
 }
+.switcher{
+  position: absolute;
+  right:72px;
+  padding: 15px;
+  border-radius: 5px ;
+  border:1px solid blue;
+  transition: all 0.3s linear;
+  font-size:18px;
+  
+}
+.switcher:hover{
+  background: blue;
+  color:#fff;
+  transform: scaleX(1.2);
+}
+
+
 .dark{
+  padding-top: 50px;
   background: #282828;
-  height: 100vh;
+  position: absolute;
+  left:0;
+  right:0;
+  top:0;
+  bottom:0;
+  
+}
+section{
+  padding-top: 50px;
+  position: absolute;
+  left:0;
+  right:0;
+  top:0;
+  bottom:0;
 }
 h1{
   color:#ffffff;
@@ -111,16 +149,7 @@ h1 span{
   text-align: center;
   padding-top: 15px;
 }
-[theme='dark'] {
-  background: #252525;
-  color: white;
-}
-[theme='dim'] {
-  background: gray;
-  color: white;
-}
-[theme='cafe'] {
-  background: #c0acac;
-  color: black;
-}
+
+
+
 </style>

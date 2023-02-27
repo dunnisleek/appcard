@@ -1,4 +1,5 @@
 <template>
+  <!--this is for the white section-->
   <div class="linksBtn">
    
 
