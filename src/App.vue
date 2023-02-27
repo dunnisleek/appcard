@@ -38,8 +38,7 @@ import whiteSection from './components/whiteSection.vue'
       const toggleDark = () =>{
         dark.value = !dark.value
       }
-    // const isDark = useDark();
-    // const toggleDark() = useToggle(isDark);
+   
   
 
 
