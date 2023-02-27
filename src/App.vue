@@ -30,7 +30,7 @@
    
  <script setup>
 import {ref} from 'vue';
-import HeaderCom from './components/HeaderCom'
+//import HeaderCom from './components/HeaderCom'
 import whiteSection from './components/whiteSection.vue'
 
 
