@@ -12,6 +12,7 @@
 </template>
 
 <script>
+
   export default {
 
   }
@@ -25,6 +26,7 @@
     margin:0px auto;
     height:35vh;
   }
+  
   .linksBtn{
     display:flex;
     flex-direction: column;

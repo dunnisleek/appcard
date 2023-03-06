@@ -19,24 +19,24 @@
     <h1>Untercom <span>APP</span></h1>
     <p>Convert your hottest leads</p>
    </div>
-   <whiteSection :class="{light:dark}"/>
+   <whiteSection :class="{light:!dark}"/>
   
   <br />
-
-  
   </section>
  
 </template>
    
  <script setup>
 import {ref} from 'vue';
-import HeaderCom from './components/HeaderCom'
+// import HeaderCom from './components/HeaderCom'
 import whiteSection from './components/whiteSection.vue'
 
 
       const dark = ref(true)
+     
       const toggleDark = () =>{
         dark.value = !dark.value
+        
       }
    
   
@@ -78,7 +78,13 @@ import whiteSection from './components/whiteSection.vue'
 // </script>
 
 <style>
-
+div .light {
+  background-color: #282828;
+  color:#ffffff;
+}
+div .light  a{
+  color:#ffffff;
+}
 p{
   color:#fff;
 }

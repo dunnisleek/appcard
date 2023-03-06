@@ -16,5 +16,4 @@ import  Toggle from "./toggleWrapper.vue"
 </script>
 
 <style scoped>
-
 </style>
