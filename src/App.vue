@@ -28,11 +28,7 @@
    
  <script setup>
 import {ref} from 'vue';
-<<<<<<< HEAD
 // import HeaderCom from './components/HeaderCom'
-=======
-//import HeaderCom from './components/HeaderCom'
->>>>>>> 0ec1335f9aaf3f26afa967451f74784080d1f44e
 import whiteSection from './components/whiteSection.vue'
 
 
